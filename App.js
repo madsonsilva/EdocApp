@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 import Header from './components/Header';
 import Inbox from './components/Inbox';
+import MessageInbox from './components/MessageInbox';
 
 export default class App extends React.Component {
   render() {
@@ -14,10 +15,10 @@ export default class App extends React.Component {
         
         {/*BODY*/}
         <View style={styles.body}>
+          {/*<MessageInbox document='200700253215' message='documento pendente de assinatura'></MessageInbox> */}
           <Inbox></Inbox>
-
-
         </View>
+        
 
 
         {/*FOOTER*/}
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 6,
-    backgroundColor: 'silver',
+    backgroundColor: 'white',
     width: 'auto',
     //height: 50
   },

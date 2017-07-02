@@ -1,12 +1,33 @@
 import React, { Component } from 'React';
-import { StyleSheet, Text, View, ScrollView, Alert } from 'react-native';
+import {
+    StyleSheet,
+    Text,
+    View,
+    ScrollView,
+    Alert,
+    Flatlist
+} from 'react-native';
 
 import MessageInbox from './MessageInbox';
 
 export default class Inbox extends Component {
 
     state = {
-        messageList: [],
+        messageList: [
+            '201700120972',
+            '201700120974',
+            '201700120975',
+            '201700121265',
+            '201700198423',
+            '201709830382',
+            '201700039332',
+            '201708309830',
+            '201700238472',
+            '201700238303',
+            '201700393473',
+            '201701098323',
+            '201703093999',
+        ],
         messageText: '',
     }
 
@@ -16,15 +37,15 @@ export default class Inbox extends Component {
 
     render() {
 
-        let inbox_messages = this.state.messageList.map((document, text) => {
-            return <MessageInbox document={document} text={message}  >  </MessageInbox>
+        let inbox_messages = this.state.messageList.map((document, message) => {
+            return <MessageInbox document={document} message='documento pendente de assinatura'  >  </MessageInbox>
         });
 
         return (
             <ScrollView>
-
-
+                {inbox_messages}
             </ScrollView>
+
         );
     }
 }
@@ -52,8 +73,8 @@ const styles = StyleSheet.create({
 
 /*const styles = StyleSheet.create({
 
-    item: {
-        padding: 10,
+                    item: {
+                    padding: 10,
         fontSize: 13,
         height: 44,
         backgroundColor: 'silver',

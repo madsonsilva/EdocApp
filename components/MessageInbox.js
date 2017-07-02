@@ -1,22 +1,20 @@
 import React, { Component } from 'React'
-import { StyleSheet, Text  } from 'react-native'
-
-
+import { StyleSheet, Text, View  } from 'react-native'
 
 export default class MessageInbox extends Component {
     
     
     render(){
         return(
-            <view>
+            <View>
                 <Text style={ styles.document }>
-                    {this.props.val.document}
+                    {this.props.document}
                 </Text>
 
                 <Text style={ styles.message }>
-                    {this.props.val.message}
+                    {this.props.message}
                 </Text>
-            </view>
+            </View>
 
         );
 
@@ -26,12 +24,15 @@ export default class MessageInbox extends Component {
 const styles = StyleSheet.create({
     document: {
         position: 'relative',
-        padding: 20,
-        fontWeight: 'bold'
+        paddingLeft: 20,
+        paddingTop: 10,
+        fontSize: 25,
+        fontWeight: 'bold',
     }, 
 
     message: {
-        paddingLeft: 20
+        fontSize: 15,
+        paddingLeft: 20,
     }
 });
 

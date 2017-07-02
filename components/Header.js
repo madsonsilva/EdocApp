@@ -26,12 +26,14 @@ const styles = StyleSheet.create({
     systemText: {
         fontSize: 50,
         color: 'rgb(256,256,256)',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        padding: 5
     },
     descriptionText: {
         fontSize: 20,
         color: '#DDC241',
         fontStyle: 'italic',
+        padding: 5
     }
 })
 
