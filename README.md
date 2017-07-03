@@ -1,7 +1,7 @@
 
 ## NPM e NODE - versions
-v7.10.0
-4.2.0
+node - v7.10.0
+npm - 4.2.0
 
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
