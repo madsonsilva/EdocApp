@@ -1,28 +1,33 @@
-import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import React, { PureComponent } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+} from 'react-native';
+
 
 import Header from './components/Header';
-import Inbox from './components/Inbox';
+import Footer from './components/Footer';
+import Inbox2 from './components/Inbox2';
 import MessageInbox from './components/MessageInbox';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        
+
         {/*HEADER*/}
         <Header></Header>
-        
+
         {/*BODY*/}
         <View style={styles.body}>
           {/*<MessageInbox document='200700253215' message='documento pendente de assinatura'></MessageInbox> */}
-          <Inbox></Inbox>
+          <Inbox2></Inbox2>
         </View>
-        
-
 
         {/*FOOTER*/}
-        <View style={styles.footer}></View>
+        <Footer></Footer>
 
       </View>
     );
@@ -42,8 +47,5 @@ const styles = StyleSheet.create({
     width: 'auto',
     //height: 50
   },
-
-  
-
 });
 

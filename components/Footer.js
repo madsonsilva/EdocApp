@@ -1,13 +1,21 @@
 import React, { Component } from 'React';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 
 export default class Footer extends Component {
 
     render() {
+
+        let imageIcon = require('../images/lupa-icon.png');
+
         return (
             <View style={styles.footer}>
-                <Text style={{ alignContent: 'center' }}>FOOTER</Text>
+                <View style={{ paddingTop: 10 }}>
+                    <Image
+                        source={imageIcon}
+                        style={styles.imageIcon}
+                    />
+                </View>
             </View>
         );
     }
@@ -16,9 +24,15 @@ export default class Footer extends Component {
 const styles = StyleSheet.create({
     footer: {
         flex: 1,
-        backgroundColor: 'blue',
+        backgroundColor: '#16295D',
         width: 'auto',
-        height: 30
+        height: 30,
+        alignItems: 'center',
+    },
+    imageIcon: {
+        width: 60,
+        height: 60,
     }
+
 })
 
